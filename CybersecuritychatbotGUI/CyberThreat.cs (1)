@@ -1,0 +1,196 @@
+using System;
+
+namespace threats
+{
+    public class CyberThreat
+    {
+        public CyberThreat() {}
+
+        public string getPhishing(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals phishing
+			if (!threatName.Equals("phishing", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: phishing");
+			}
+			
+			return "Phishing is a type of cyber attack where attackers send fraudulent messages(usually emails) pretending to be from a reputable source.\n"+
+			"The aim is to trick the recipient into revealing sensitive information such as login credentials, credit card numbers, or personal data.";
+		}
+
+        public string getMalware(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals malware
+			if (!threatName.Equals("malware", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: malware");
+			}
+			return "Malware(malicious software) is any software intentionally designed to cause damage to a computer, server, client, or network. \n"+
+			"Examples include:\n 1.Viruses \n 2.Worms \n 3.Trojans \n 4.Ransomware \n 5.Spyware.";
+        }
+
+        public string getRansomware(string threatName)
+        {
+		    //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals ransomware
+			if (!threatName.Equals("ransomware", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: ransomware");
+			}
+            return "Ransomware is a form of malware that encrypts a victim's files. \n"+
+			"The attacker then demands a ransom from the victim to restore access to the data upon payment.";
+        }
+
+        public string getManInTheMiddle(string threatName)
+        {
+			//test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Man in the Middle(MitM)
+			if (!threatName.Equals("Man in the Middle(MitM)", StringComparison.OrdinalIgnoreCase) || !threatName.Equals("MitM", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Man in the Middle(MitM)");
+			}
+            return "Man in the Middle(MitM): attack occurs when a third party intercepts communication between two parties, often to steal data or impersonate one of the parties involved.";
+        }
+
+        public string getSQLInjection(string threatName)
+        {
+			//test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals SQL Injection
+			if (!threatName.Equals("SQL Injection", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: SQL Injection");
+			}
+            return "SQL Injection is a web security vulnerability that allows an attacker to interfere with the queries an application makes to its database.\n"+
+			"It can allow access to sensitive data, modification of data, and administrative operations.";
+        }
+
+        public string getDenialOfService(string threatName)
+        {
+			//test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Denial of Service(DoS)
+			if (!threatName.Equals("Denial of Service(DoS)", StringComparison.OrdinalIgnoreCase) || !threatName.Equals("DoS", StringComparison.OrdinalIgnoreCase) || !threatName.Equals("DDoS", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Denial of Service(DoS)");
+			}
+            return "Denial of Service(DoS): attack aims to make a machine or network resource unavailable to its intended users by overwhelming it with traffic or sending information that triggers a crash.";
+        }
+
+        public string getZeroDayExploit(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Zero Day Exploit
+			if (!threatName.Equals("Zero Day Exploit", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Zero Day Exploit");
+			}
+			return "Zero Day Exploit: is an attack that occurs on the same day a vulnerability is discovered in software, before a fix becomes available. Attackers exploit the flaw before developers patch it.";
+        }
+
+        public string getSpyware(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Spyware
+			if (!threatName.Equals("Spyware", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Spyware");
+			}
+			return "Spyware is malicious software designed to enter your device, gather data about you, and forward it to a third-party without your consent.";
+        }
+
+        public string getTrojanHorse(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Trojan Horse
+			if (!threatName.Equals("Trojan Horse", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Trojan Horse");
+			}
+			return "Trojan Horse is a type of malware disguised as legitimate software. Once installed, it can give attackers unauthorized access to the system.";
+        }
+
+        public string getRootkit(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Rootkit
+			if (!threatName.Equals("Rootkit", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Rootkit");
+			}
+			return "Rootkit is a collection of software tools that enable an unauthorized user to gain control of a computer system without being detected.";
+        }
+
+        public string getKeylogger(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Keyloggers
+			if (!threatName.Equals("Keyloggers", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Keyloggers");
+			}
+			return "Keyloggers are malicious programs or hardware devices that record every keystroke made on a computer, often used to steal passwords or sensitive data.";
+        }
+
+        public string getBotnet(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Botnet
+			if (!threatName.Equals("Botnet", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Botnet");
+			}
+			return "Botnet is a network of infected computers (bots) controlled remotely by an attacker, often used to launch large-scale attacks like DDoS.";
+        }
+
+        public string getSocialEngineering(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Social Engineering
+			if (!threatName.Equals("Social Engineering", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Social Engineering");
+			}
+			return "Social Engineering is a tactic that relies on human interaction to trick users into breaking security procedures and giving away sensitive information.";
+        }
+
+        public string getCredentialStuffing(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Credential Stuffing
+			if (!threatName.Equals("Credential Stuffing", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Credential Stuffing");
+			}
+			return "Credential Stuffing is a cyber attack where stolen account credentials, typically consisting of lists of usernames and/or email addresses and the corresponding passwords, are used to gain unauthorized access to user accounts.";
+        }
+    }
+}

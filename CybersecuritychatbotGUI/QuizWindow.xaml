@@ -1,0 +1,59 @@
+﻿<Window x:Class="CybersecuritychatbotGUI.QuizWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cybersecurity Quiz" Height="400" Width="600"
+        WindowStartupLocation="CenterScreen"
+        Background="#1B263B">
+    <!-- Dark navy background -->
+
+    <Grid Margin="20">
+        <Border Background="White" CornerRadius="12" Padding="20"
+                BorderBrush="#3E5C76" BorderThickness="1">
+            <StackPanel>
+
+                <!-- Question Text -->
+                <TextBlock x:Name="txtQuestion"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           Foreground="#1B263B"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,15"/>
+
+                <!-- Options List -->
+                <ListBox x:Name="lstOptions"
+                         SelectionMode="Single"
+                         Margin="0,0,0,15"
+                         FontSize="14"
+                         Background="#F8F9FA"
+                         BorderBrush="#BCCCDC"
+                         Foreground="#1B263B"/>
+
+                <!-- Submit Button -->
+                <Button Content="Submit Answer"
+                        Click="SubmitAnswer_Click"
+                        Width="150"
+                        Height="35"
+                        Margin="0,0,0,15"
+                        HorizontalAlignment="Left"
+                        Background="#3E8EDE"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        BorderBrush="#2C699A"
+                        Cursor="Hand"/>
+
+                <!-- Feedback -->
+                <TextBlock x:Name="txtFeedback"
+                           FontSize="14"
+                           Foreground="#34495E"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,10"/>
+
+                <!-- Score -->
+                <TextBlock x:Name="txtScore"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#2C3E50"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

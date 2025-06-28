@@ -1,0 +1,251 @@
+using System;
+
+namespace tips
+{
+    public class CyberThreatTip
+    {
+        public CyberThreatTip() {}
+
+        public string getPhishingTip(string threatName)
+        {
+			 //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals phishing
+			if (!threatName.Equals("phishing", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: phishing");
+			}
+            return "Tips to stay safe from Phishing:\n"+
+			"1. Do not click on suspicious links or attachments.\n"+
+			"2. Verify the sender’s email address.\n"+
+			"3. Use spam filters to block malicious emails.\n"+
+			"4. Enable two-factor authentication on all accounts.";
+        }
+
+        public string getMalwareTip(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals malware
+			if (!threatName.Equals("malware", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: malware");
+			}
+			return "Tips to stay safe from Malware:\n"+
+			"1. Install and update reputable antivirus software.\n"+
+			"2. Avoid downloading files from untrusted websites.\n"+
+			"3. Keep your operating system and apps updated.\n"+
+			"4. Be cautious of pop-ups and unknown websites.";
+        }
+
+        public string getRansomwareTip(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals ransomware
+			if (!threatName.Equals("ransomware", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: ransomware");
+			}
+			return "Tips to stay safe from Ransomware:\n"+
+			"1. Regularly back up your important files.\n"+
+			"2. Avoid opening suspicious email attachments.\n"+
+			"3. Keep antivirus and security software updated.\n"+
+			"4. Use endpoint protection tools with ransomware detection.";
+        }
+
+        public string getManInTheMiddleTip(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Man in the Middle(MitM)
+			if (!threatName.Equals("Man in the Middle(MitM)", StringComparison.OrdinalIgnoreCase) || !threatName.Equals("MitM", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Man in the Middle(MitM)");
+			}
+
+			return "Tips to stay safe from Man-in-the-Middle attacks:\n"+
+			"1. Use websites with HTTPS encryption.\n"+
+			"2. Avoid public Wi-Fi for sensitive activities.\n"+
+			"3. Use a VPN on public or unsecured networks.\n"+
+			"4. Keep your firmware and software updated.";
+        }
+
+        public string getSQLInjectionTip(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals SQL Injection
+			if (!threatName.Equals("SQL Injection", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: SQL Injection");
+			}
+
+			return "Tips to stay safe from SQL Injection:\n"+
+			"1. Use parameterized queries and prepared statements.\n"+
+			"2. Validate and sanitize all user inputs.\n"+
+			"3. Avoid building SQL queries from raw user input.\n"+
+			"4. Use secure ORM frameworks for database access.";
+        }
+
+        public string getDenialOfServiceTip(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Denial of Service(DoS)
+			if (!threatName.Equals("Denial of Service(DoS)", StringComparison.OrdinalIgnoreCase) || !threatName.Equals("DoS", StringComparison.OrdinalIgnoreCase) || !threatName.Equals("DDoS", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Denial of Service(DoS)");
+			}
+			return "Tips to stay safe from Denial-of-Service attacks:\n"+
+			"1. Use firewalls and intrusion detection systems.\n"+
+			"2. Apply rate limiting to APIs and services.\n"+
+			"3. Use a content delivery network (CDN).\n"+
+			"4. Create and test an incident response plan.";
+        }
+
+        public string getZeroDayExploitTip(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Zero Day Exploit
+			if (!threatName.Equals("Zero Day Exploit", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Zero Day Exploit");
+			}
+
+			return "Tips to stay safe from Zero-Day Exploits:\n"+
+			"1. Enable automatic updates for software and systems.\n"+
+			"2. Use advanced threat detection solutions.\n"+
+			"3. Segment your network to limit access.\n"+
+			"4. Monitor systems for unusual or suspicious activity.";
+        }
+
+        public string getSpywareTip(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Spyware
+			if (!threatName.Equals("Spyware", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Spyware");
+			}
+			return "Tips to stay safe from Spyware:\n"+
+			"1. Avoid downloading software from unknown sources.\n"+
+			"2. Use reliable anti-spyware and antivirus tools.\n"+
+			"3. Do not click on fake ads or update prompts.\n"+
+			"4. Regularly scan your system for threats.";
+        }
+
+        public string getTrojanHorseTip(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Trojan Horse
+			if (!threatName.Equals("Trojan Horse", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Trojan Horse");
+			}
+			return "Tips to stay safe from Trojan Horses:\n"+
+			"1. Only download software from trusted vendors.\n"+
+			"2. Keep your antivirus software up to date.\n"+
+			"3. Be careful with links and attachments in emails.\n"+
+			"4. Watch for unusual system behavior or apps.";
+        }
+
+        public string getRootkitTip(string threatName)
+        {
+             //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Rootkit
+			if (!threatName.Equals("Rootkit", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Rootkit");
+			}
+			return "Tips to stay safe from Rootkits:\n"+
+			"1. Use rootkit detection and removal tools.\n"+
+			"2. Avoid pirated or cracked software.\n"+
+			"3. Monitor system integrity and logs regularly.\n"+
+			"4. Reinstall the operating system if infection is suspected.";
+        }
+
+        public string getKeyloggerTip(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Keyloggers
+			if (!threatName.Equals("Keyloggers", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Keyloggers");
+			}
+
+			return "Tips to stay safe from Keyloggers:\n"+
+			"1. Use a virtual keyboard for sensitive logins.\n"+
+			"2. Keep antivirus software updated at all times.\n"+
+			"3. Monitor for unknown or suspicious apps.\n"+
+			"4. Enable two-factor authentication for important accounts.";
+        }
+
+        public string getBotnetTip(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Botnet
+			if (!threatName.Equals("Botnet", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Botnet");
+			}
+			return "Tips to stay safe from Botnets:\n"+
+			"1. Keep operating systems and applications updated.\n"+
+			"2. Use strong and unique passwords.\n"+
+			"3. Avoid clicking on suspicious links or pop-ups.\n"+
+			"4. Use firewalls and antivirus programs for protection.";
+        }
+
+        public string getSocialEngineeringTip(string threatName)
+        {
+            //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Social Engineering
+			if (!threatName.Equals("Social Engineering", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Social Engineering");
+			}
+			return "Tips to stay safe from Social Engineering:\n"+
+			"1. Verify a person's identity before sharing information.\n"+
+			"2. Train staff to recognize common scam techniques.\n"+
+			"3. Never share passwords or security codes.\n"+
+			"4. Be cautious of urgent or emotional requests.";
+        }
+
+        public string getCredentialStuffingTip(string threatName)
+        {
+		    //test if threatName is null
+			if (string.IsNullOrWhiteSpace(threatName)){
+				throw new ArgumentNullException(nameof(threatName), "Tip type cannot be null or empty.");
+			}
+			//test if threatName is equals Credential Stuffing
+			if (!threatName.Equals("Credential Stuffing", StringComparison.OrdinalIgnoreCase)) {
+				throw new ArgumentException("Invalid tip type. Expected: Credential Stuffing");
+			}
+            return "Tips to stay safe from Credential Stuffing:\n"+
+			"1. Use different passwords for every online account.\n"+
+			"2. Enable multi-factor authentication (MFA).\n"+
+			"3. Monitor for unusual or suspicious login activity.\n"+
+			"4. Use a password manager to store secure passwords.";
+        }
+    }
+}
